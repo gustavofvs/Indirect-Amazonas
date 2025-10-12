@@ -12,6 +12,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Search, User } from "lucide-react";
 import { Link } from "react-router-dom"; 
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
 type ListItemProps = {
   to: string;
@@ -96,9 +97,9 @@ export function HeaderMenu() {
           <Button variant="ghost" size="icon">
             <Search className="h-5 w-5" />
           </Button>
-          <Button variant="ghost" size="icon">
-            <User className="h-5 w-5" />
-          </Button>
+          <Avatar>
+            <AvatarFallback className="text-[12px]">AM</AvatarFallback>
+          </Avatar>
           <Button variant="ghost" size="icon">
             <ShoppingBag className="h-5 w-5" />
           </Button>
