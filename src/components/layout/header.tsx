@@ -51,7 +51,7 @@ export function HeaderMenu() {
       <div className="container mx-auto flex h-16 items-center justify-center gap-90">
         
         <Link to="/" className="flex items-center gap-2">
-          <span className="font-bold hidden sm:inline-block text-primary">AMAZONAS™</span>
+          <span className="font-bold hidden sm:inline-block text-ring">AMAZONAS™</span>
         </Link>
 
         <nav className="hidden md:flex">
