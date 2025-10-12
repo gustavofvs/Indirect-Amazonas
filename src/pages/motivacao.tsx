@@ -85,9 +85,9 @@ function Motivacao() {
                         imageSrc={motivation.imageSrc}
                         altText={motivation.altText}
                         captionText={motivation.tooltipText}
-                        containerHeight='200px'
+                        containerHeight='300px'
                         containerWidth='100%'
-                        imageHeight='200px'
+                        imageHeight='300px'
                         imageWidth='100%'
                         scaleOnHover={1.1}
                         rotateAmplitude={8}
