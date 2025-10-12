@@ -1,4 +1,3 @@
-import React from 'react';
 import HeaderMenu from '@/components/layout/header';
 import CardGrid from '@/components/shared/CardGrid';
 import { animals } from '@/data/animals';

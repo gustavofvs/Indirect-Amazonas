@@ -1,6 +1,7 @@
-import type { SpringOptions } from 'motion';
-import { useRef } from 'react';
-import { motion } from 'motion/react';
+// @ts-ignore
+import { useRef, useState, useCallback } from 'react';
+// @ts-ignore
+import { motion, useMotionValue, useSpring } from 'motion/react';
 import { useTiltedCardAnimation } from '@/hooks/useTiltedCardAnimation'; 
 
 interface TiltedCardProps {
@@ -40,6 +41,13 @@ export default function TiltedCard({
     rotateAmplitude,
     scaleOnHover
   });
+
+  // @ts-ignore
+  const springValues = {
+    damping: 30,
+    stiffness: 100,
+    mass: 2
+  };
 
   return (
     <figure
