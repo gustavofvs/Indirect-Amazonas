@@ -26,17 +26,17 @@ function Gallery() {
     <div className='flex flex-col min-h-screen bg-background'>
       <HeaderMenu />
       
-      <main className='flex-grow px-4 py-16 sm:px-8 md:py-24'>
+      <main className='flex-grow px-4 py-8 sm:px-8 md:py-16'>
         <div className='max-w-7xl mx-auto'>
           
-          <h1 className='text-4xl md:text-6xl font-bold text-ring tracking-tighter text-center mb-4'>
+          <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold text-ring tracking-tighter text-center mb-4'>
             Animais Fofinhos
           </h1>
-          <h2 className="text-lg md:text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-16 md:mb-24">
+          <h2 className="text-sm md:text-lg lg:text-xl text-muted-foreground text-center max-w-2xl mx-auto mb-8 md:mb-16 lg:mb-24">
             Momentos fofinhos com um toque de indireta, porque a vida não é sempre doce e os animais sabem disso melhor que ninguém.
           </h2>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 md:gap-16'>
             {animals.map((animal) => (
               <div key={animal.id} className='group flex flex-col'>
                 <Sheet>
@@ -46,9 +46,9 @@ function Gallery() {
                         imageSrc={animal.imageSrc}
                         altText={animal.altText}
                         captionText={animal.captionText}
-                        containerHeight='350px'
+                        containerHeight='200px'
                         containerWidth='100%'
-                        imageHeight='350px'
+                        imageHeight='200px'
                         imageWidth='100%'
                         scaleOnHover={1.1}
                         rotateAmplitude={8}
@@ -67,11 +67,11 @@ function Gallery() {
                   </SheetContent>
                 </Sheet>
 
-                <div className='mt-6 space-y-2 text-left'>
-                  <h2 className='text-lg font-semibold text-foreground'>
+                <div className='mt-4 sm:mt-6 space-y-2 text-left'>
+                  <h2 className='text-base sm:text-lg font-semibold text-foreground'>
                     {animal.name}
                   </h2>
-                  <p className='text-sm text-muted-foreground'>
+                  <p className='text-xs sm:text-sm text-muted-foreground'>
                     {animal.funFact}
                   </p>
                 </div>

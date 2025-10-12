@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,7 +9,9 @@ import {
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom"; 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 type ListItemProps = {
   to: string;
@@ -43,9 +45,11 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export function HeaderMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-center gap-90">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
         
         <Link to="/" className="flex items-center gap-2">
           <span className="font-bold hidden sm:inline-block text-ring">AMAZONAS™</span>
@@ -78,8 +82,27 @@ export function HeaderMenu() {
             <AvatarFallback className="text-[12px]">AM</AvatarFallback>
           </Avatar>
           <ModeToggle />
-          <Button variant="ghost" size="icon" className="md:hidden cursor-target">
-          </Button>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden cursor-target">
+                <Menu className="h-4 w-4" />
+                <span className="sr-only">Toggle menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-4">
+                <Link to="/" onClick={() => setIsOpen(false)} className="text-lg font-semibold">
+                  Home
+                </Link>
+                <Link to="/gallery" onClick={() => setIsOpen(false)} className="text-lg">
+                  Animais Fofinhos
+                </Link>
+                <Link to="/motivacao" onClick={() => setIsOpen(false)} className="text-lg">
+                  Motivação Real
+                </Link>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
