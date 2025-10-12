@@ -22,11 +22,11 @@ function Hero() {
         </h2>
         
         <div className='flex gap-4 mt-8'>
-          <GetStartedButton className='bg-ring hover:bg-ring cursor-pointer'>
+          <GetStartedButton className='bg-ring hover:bg-ring cursor-target'>
             Explorar Produtos
           </GetStartedButton>
 
-          <Button variant='ghost' className='border bg-ring/5 cursor-pointer h-10 w-50 hover:border border-ring'>
+          <Button variant='ghost' className='border bg-ring/5 h-10 w-50 hover:border border-ring cursor-target'>
             Ver Promoções
           </Button>
         </div>

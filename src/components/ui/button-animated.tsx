@@ -26,7 +26,7 @@ const GetStartedButton = React.forwardRef<
       ref={ref}
       size={size}
       variant="default"
-      className={cn("group relative overflow-hidden", className)}
+      className={cn("group relative overflow-hidden cursor-target", className)}
       {...restProps}
     >
       <span className="mr-8 transition-opacity duration-300 group-hover:opacity-0">

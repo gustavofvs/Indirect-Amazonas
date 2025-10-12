@@ -94,17 +94,17 @@ export function HeaderMenu() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="cursor-target">
             <Search className="h-5 w-5" />
           </Button>
-          <Avatar>
+          <Avatar className="cursor-target">
             <AvatarFallback className="text-[12px]">AM</AvatarFallback>
           </Avatar>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="cursor-target">
             <ShoppingBag className="h-5 w-5" />
           </Button>
           <ModeToggle />
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button variant="ghost" size="icon" className="md:hidden cursor-target">
           </Button>
         </div>
       </div>
