@@ -6,14 +6,13 @@ import react from '@vitejs/plugin-react-swc'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
   },
   server: {
 
-    port: 3000,
-
+    port:3000,
   }
 })
