@@ -97,26 +97,6 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
 
     window.addEventListener('scroll', scrollHandler, { passive: true });
 
-    const mouseDownHandler = (): void => {
-      window.addEventListener('mousemove', moveHandler);
-      if (!dotRef.current) return;
-
-      const mouseDownHandler = (): void => {
-        gsap.to(dotRef.current, { scale: 0.7, duration: 0.3 });
-        gsap.to(cursorRef.current, { scale: 0.9, duration: 0.2 });
-      };
-
-      const mouseUpHandler = (): void => {
-        gsap.to(cursorRef.current, { scale: 1, duration: 0.2 });
-        if (!dotRef.current) return;
-        gsap.to(dotRef.current, { scale: 1, duration: 0.3 });
-        gsap.to(cursorRef.current, { scale: 1, duration: 0.2 });
-      };
-
-      window.addEventListener('mousedown', mouseDownHandler);
-      window.addEventListener('mouseup', mouseUpHandler);
-    };
-
     const enterHandler = (e: MouseEvent) => {
       const directTarget = e.target as Element;
 

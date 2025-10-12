@@ -4,13 +4,10 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { ShoppingBag, Search, User } from "lucide-react";
 import { Link } from "react-router-dom"; 
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 
