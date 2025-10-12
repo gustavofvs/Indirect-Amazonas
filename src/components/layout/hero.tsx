@@ -1,6 +1,7 @@
 import GetStartedButton from '@/components/ui/button-animated';
 import { Button } from '@/components/ui/button';
 import TextPressure from '@/components/ui/TextPressure'
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -17,18 +18,21 @@ function Hero() {
             className='font-mono font-extrabold text-primary'
         /> 
         <h2 className='font-mono text-secondary max-w-5xl'>
-          Bem-vindo à Amazonas, onde a diversidade encontra a conveniência. Inspirados pela riqueza e pelo fluxo constante do maior rio do mundo, reunimos um catálogo 
-          imenso de produtos para facilitar o seu dia a dia. Da tecnologia que move você aos itens que transformam sua casa, aqui você navega com facilidade, descobre novidades incríveis e recebe tudo com a agilidade que você merece.
+          Bem-vindo à Amazonas, onde a realidade encontra a indireta. Inspirados pela diversidade e pelo fluxo constante do maior rio do mundo, reunimos galerias que fazem você refletir sobre a vida, o amor e a motivação. Dos animais fofinhos com toques de sarcasmo aos casais felizes que escondem verdades cruas, aqui você navega por momentos que acordam a mente, revelam a verdade e desafiam suas ilusões.
         </h2>
         
         <div className='flex gap-4 mt-8'>
-          <GetStartedButton className='bg-ring hover:bg-ring cursor-target'>
-            Explorar Produtos
-          </GetStartedButton>
+          <Link to="/motivacao">
+            <GetStartedButton className='bg-ring hover:bg-ring cursor-target'>
+              Ver Motivação Real
+            </GetStartedButton>
+          </Link>
 
-          <Button variant='ghost' className='border bg-ring/5 h-10 w-50 hover:border border-ring cursor-target'>
-            Ver Promoções
-          </Button>
+          <Link to="/gallery">
+            <Button variant='ghost' className='border bg-ring/5 h-10 w-50 hover:border border-ring cursor-target'>
+              Explorar Realidade
+            </Button>
+          </Link>
         </div>
       </main>
   );

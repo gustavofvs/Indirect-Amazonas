@@ -8,7 +8,7 @@ import {
   NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "@/components/mode-toggle";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Search, User } from "lucide-react";
 import { Link } from "react-router-dom"; 
@@ -58,34 +58,17 @@ export function HeaderMenu() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/novidades">
+                <Link to="/gallery">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Novidades
+                    Animais Fofinhos
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Categorias</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <ListItem to="/categorias/camisetas" title="Camisetas">
-                      As melhores estampas para expressar seu estilo.
-                    </ListItem>
-                    <ListItem to="/categorias/moletons" title="Moletons">
-                      Conforto e aquecimento para os dias mais frios.
-                    </ListItem>
-                    <ListItem to="/categorias/acessorios" title="Acessórios">
-                      Bonés, meias e muito mais para completar seu visual.
-                    </ListItem>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/promocoes">
+                <Link to="/motivacao">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Promoções
+                    Motivação Real
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -94,15 +77,9 @@ export function HeaderMenu() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="cursor-target">
-            <Search className="h-5 w-5" />
-          </Button>
           <Avatar className="cursor-target">
             <AvatarFallback className="text-[12px]">AM</AvatarFallback>
           </Avatar>
-          <Button variant="ghost" size="icon" className="cursor-target">
-            <ShoppingBag className="h-5 w-5" />
-          </Button>
           <ModeToggle />
           <Button variant="ghost" size="icon" className="md:hidden cursor-target">
           </Button>
